@@ -39,7 +39,7 @@ ul {
   margin: 0;
   padding: 0;
 }
-h5, h3 {
+h5, h2 {
   color: red
 }
 </style>
@@ -80,15 +80,23 @@ h5, h3 {
     });
   });
   $(document).ready(function() {
-  $("#rad").hide();
+  $("#bod2").hide();
 
-  $("#gender").click(function() {
-    $("#rad").fadeToggle(); 
+  $("#ski").click(function() {
+    $("#bod2").fadeToggle(); 
+
+    });
+  });
+  $(document).ready(function() {
+  $("#bod3").hide();
+
+  $("#pro").click(function() {
+    $("#bod3").fadeToggle(); 
 
     });
   });
     $(document).ready(function() {
-    $("h5, #gender").hover(function() {
+    $("h5, h2").hover(function() {
       $(this).css({
         "color": "blue",
         "text-decoration": "underline"
@@ -135,16 +143,32 @@ h5, h3 {
       </div>
       <div class="rightside">
         <div class="card" style="width: 100%;">
-            <div class="card-body">
-                <h3 id="gender">Gender</h3>
-                <div id="rad">
-                <fieldset>
-                <label><input type="radio" id="Male" name="Gender" value="Male" checked>Male</label>
-                <label><input type="radio" id="Female" name="Gender" value="Female" disabled>Female</label>
-                </fieldset>
-              </div>
-          </div>
-          </div>
+          <div class="card-body">
+          <h2 id="ski">Programming Skills</h2>
+          <div id="bod2">
+          <ul>
+          <li><input type="checkbox" id="Skill1" name="Skill1" value="HTML" checked>
+          <label for="Skill1">HTML</label><br></li>
+          <li><input type="checkbox" id="Skill2" name="Skill2" value="JavaScript" checked>
+          <label for="Skill2">JavaScript</label></li>
+          <li><input type="checkbox" id="Skill3" name="Skill3" value="Python" checked>
+          <label for="Skill3">Python</label></li>
+      </ul>
+      </div>
+      </div>
+  </div>
+  <div class="card" style="width: 100%;">
+    <div class="card-body">
+    <h2 id="pro">Projects</h2>
+    <div id="bod3">
+    <ul">
+    <li><a href="https://relkereta.github.io/portfolio/">Portfolio</a>
+      <li><a href="https://relkereta.github.io/HCI_FORUM/">Forum Project</a>
+        <li><a href="https://relkereta.github.io/HCI-Lab/">Lab Project</a> 
+</ul>
+</div>
+</div>
+</div>
           </div>
   </body>
   </html>
